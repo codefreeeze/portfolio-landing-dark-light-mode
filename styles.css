@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-proton: #000;
+}
+
+.dark {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-proton: #d3d3d3;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  transition: all 0.15s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+section {
+  max-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+nav .fa-envelope {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--color-proton);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+nav .nav-email {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-proton);
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 2rem;
+  position: relative;
+}
+
+nav ul li.active::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  bottom: -0.3rem;
+  left: 0;
+  background-color: var(--color-secondary);
+}
+
+nav ul li.active {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+nav ul li {
+  color: var(--color-proton);
+}
+
+#nav-mode_switch {
+  background: transparent;
+  outline: none;
+  color: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+}
+
+body.dark #nav-mode_switch .fa-sun {
+  display: none;
+}
+
+body.dark #nav-mode_switch .fa-moon {
+  display: block;
+}
+
+#nav-mode_switch .fa-moon {
+  display: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.main-name {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main p {
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+  color: var(--color-proton);
+}
+
+main button {
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  margin-top: 1.5rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
